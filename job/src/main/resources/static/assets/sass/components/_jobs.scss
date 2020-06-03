@@ -1,0 +1,35 @@
+/* Jobs */
+
+@charset "UTF-8";
+
+.item-jobpost {
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #eeeeee;
+   color : $grey;
+   &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+   }
+   & h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+   }
+   & ul {
+      & li {
+         & img {
+            width : 20px;
+            margin-right: 10px;
+            margin-top: -3px;
+         }
+         padding-bottom: 0;
+      }
+   }
+   & .jobpost-location {
+      margin-top: 10px;
+   }
+   & .jobpost-apply-btn {
+      margin-top: 10px;
+   }
+}

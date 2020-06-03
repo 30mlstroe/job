@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Myjob Documentation</title>
+    <link rel="stylesheet" href="assets/css/doc.css">
+</head>
+<body>
+    <div class="bootstrap-sidebar">
+        <ul class="nav navbar-nav">
+            <li><a href="#getting-start">Getting Start</a></li>
+            <li><a href="#features">Features</a></li>
+            <li>
+                <a href="#">HTML <i class="md-caret-down"></i></a>
+                <ul class="nav navbar-nav">
+                    <li><a href="#file-structure">File Structure</a></li>
+                    <li><a href="#html-basic-structure">Basic Structure</a></li>
+                    <li><a href="#to-created-a-header">To create a header</a></li>
+                    <li><a href="#to-created-a-content">To create a content</a></li>
+                    <li><a href="#to-created-a-footer">To create a footer</a></li>
+                    <li><a href="#result">Result</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">CSS <i class="md-caret-down"></i></a>
+                <ul class="nav navbar-nav">
+                    <li><a href="#css-structure">File Structure</a></li>
+                    <li><a href="#scss-configuration">SCSS/SASS Configuration</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Javascript <i class="md-caret-down"></i></a>
+                <ul class="nav navbar-nav">
+                    <li><a href="#js-structure">File Structure</a></li>
+                    <li><a href="#plugins">Plugins</a></li>
+                </ul>
+            </li>
+            <li><a href="#customize">Customize</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#helper-classes">Helper classes</a></li>
+            <li><a href="#Changelog">Changelog</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+
+        <section id="getting-start">
+            <article>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1>Myjob - Job Postings HTML5 Template</h1>
+                        <h4>It is an HTML template that you can use to list your job postings. Here you will find general information about the use of this template. Please read and follow these notes carefully.</h4>
+                        <ul class="reset">
+                            <li>Created: 03/08/2017</li>
+                            <li>Latest update: 03/15/2017</li>
+                            <li>by: IslandTheme</li>
+                            <li>Email: info@kodyum.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Features start -->
+        <section id="features">
+            <h2>Features</h2>
+            <ul class="reset">
+                <li>Built with Bootstrap 3.x</li>
+                <li>HTML5 & CSS3</li>
+                <li>30 verified HTML5 templates</li>
+                <li>100% responsive and clean design</li>
+                <li>Clean and organized code structure</li>
+                <li>And much more...</li>
+            </ul>
+        </section>
+        <!-- Features end -->
+
+        <section id="file-structure">
+            <h2>File Structure</h2>
+            <p>When you start a job, make your file like this.</p>
+            <pre>
+
+    - assets
+        - css
+        - icons
+        - images
+        - js
+        - sass
+        - config.rb
+   - index.html
+            </pre>
+        </section>
+
+        <!-- HTML Basic Structure start -->
+        <section id="html-basic-structure">
+            <h2>HTML Basic Structure</h2>
+            <p>A <code>index.html</code> file basically consists of the following codes.</p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Project name&lt;/title&gt;
+    &lt;!-- Custom css --&gt;
+    &lt;link rel="stylesheet" href="assets/css/app.css"&gt;
+    &lt;!-- Favicon --&gt;
+    &lt;link rel="Shortcut Icon"  href="assets/images/favicon.png"  type="image/x-icon"&gt;
+    &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="assets/js/html5shiv.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;!-- Header should be here --&gt;
+
+        &lt;!-- Content should be here --&gt;
+
+        &lt;!-- Footer should be here --&gt;
+
+        &lt;!-- Jquery --&gt;
+        &lt;script src="assets/js/jquery/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Jquery ui --&gt;
+        &lt;script src="assets/js/jquery/jquery-ui.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Bootstrap --&gt;
+        &lt;script src="assets/js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Bootstrap slider --&gt;
+        &lt;script src="assets/js/bootstrap-slider/bootstrap-slider.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Waves effect --&gt;
+        &lt;script src="assets/js/waves/waves.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Scroll animate effect --&gt;
+        &lt;script src="assets/js/scroll.js"&gt;&lt;/script&gt;
+        &lt;!-- Owl carousel --&gt;
+        &lt;script src="assets/js/owl-carousel/owl.carousel.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Summernote editor --&gt;
+        &lt;script src="assets/js/summernote/summernote.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Typed.js --&gt;
+        &lt;script src="assets/js/typed.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Custom --&gt;
+        &lt;script src="assets/js/app.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+        <!-- HTML Basic Structure end -->
+
+        <!-- To create a header start -->
+        <section id="to-created-a-header">
+            <h2>To create a header</h2>
+            <p>Basically, the following structure is used to create a header.</p>
+            <pre><code class="html">&lt;header class="main-header"&gt;
+    &lt;!-- Navbar start --&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;div class="container"&gt;
+            &lt;!-- Logo start --&gt;
+            &lt;a href="index.html" class="navbar-brand"&gt;
+                &lt;img src="assets/images/logo.png" alt="..."&gt;
+            &lt;/a&gt;
+            &lt;!-- Logo end --&gt;
+            &lt;!-- Navs start --&gt;
+            &lt;div class="navs"&gt;
+                &lt;ul class="nav navbar-nav account"&gt;
+                ...
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- Navs end  --&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;!-- Navbar end --&gt;
+&lt;/header&gt;</code></pre>
+        </section>
+        <!-- To create a header end -->
+
+        <!-- To create a content start -->
+        <section id="to-created-a-content">
+            <h2>To create a content</h2>
+            <p>The tags are used to <code>section</code> create content. Basically, the following structure is used to create content.</p>
+            <pre><code class="html">&lt;section&gt;
+&lt;!-- HTML tags and components --&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+&lt;!-- HTML tags and components --&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+&lt;!-- HTML tags and components --&gt;
+&lt;/section&gt;</code></pre>
+        </section>
+        <!-- To create a content end -->
+
+        <!-- To create a footer end -->
+        <section id="to-created-a-footer">
+            <h2>To create a footer</h2>
+            <p>Basically, the following structure is used to create the footer.</p>
+            <pre><code class="html">&lt;footer&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;h5&gt;...&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-3"&gt;
+            &lt;h5&gt;...&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-3"&gt;
+            &lt;h5&gt;...&lt;/h5&gt;
+            &lt;ul&gt;
+            ...
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+        </section>
+        <!-- To create a footer end -->
+
+        <!-- html result start -->
+        <section id="result">
+            <h2>Result</h2>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Project name&lt;/title&gt;
+    &lt;!-- Custom css --&gt;
+    &lt;link rel="stylesheet" href="assets/css/app.css"&gt;
+    &lt;!-- Favicon --&gt;
+    &lt;link rel="Shortcut Icon"  href="assets/images/favicon.png"  type="image/x-icon"&gt;
+    &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="assets/js/html5shiv.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;!-- Header start --&gt;
+        &lt;header class="main-header"&gt;
+            &lt;!-- Navbar start --&gt;
+            &lt;nav class="navbar"&gt;
+                &lt;div class="container"&gt;
+                    &lt;!-- Logo start --&gt;
+                    &lt;a href="index.html" class="navbar-brand"&gt;
+                        &lt;img src="assets/images/logo.png" alt="..."&gt;
+                    &lt;/a&gt;
+                    &lt;!-- Logo end --&gt;
+                    &lt;!-- Navs start --&gt;
+                    &lt;div class="navs"&gt;
+                        &lt;ul class="nav navbar-nav account"&gt;
+                        ...
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;!-- Navs end  --&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+            &lt;!-- Navbar end --&gt;
+        &lt;/header&gt;
+        &lt;!-- Header end --&gt;
+
+        &lt;section&gt;
+            &lt;!-- HTML tags and components --&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;!-- HTML tags and components --&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;!-- HTML tags and components --&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Footer start --&gt;
+        &lt;footer&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="col-md-6"&gt;
+                    &lt;h5&gt;...&lt;/h5&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-3"&gt;
+                    &lt;h5&gt;...&lt;/h5&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-3"&gt;
+                    &lt;h5&gt;...&lt;/h5&gt;
+                    &lt;ul&gt;
+                    ...
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;!-- Footer end --&gt;
+
+        &lt;!-- Jquery --&gt;
+        &lt;script src="assets/js/jquery/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Jquery ui --&gt;
+        &lt;script src="assets/js/jquery/jquery-ui.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Bootstrap --&gt;
+        &lt;script src="assets/js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Bootstrap slider --&gt;
+        &lt;script src="assets/js/bootstrap-slider/bootstrap-slider.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Waves effect --&gt;
+        &lt;script src="assets/js/waves/waves.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Scroll animate effect --&gt;
+        &lt;script src="assets/js/scroll.js"&gt;&lt;/script&gt;
+        &lt;!-- Owl carousel --&gt;
+        &lt;script src="assets/js/owl-carousel/owl.carousel.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Summernote editor --&gt;
+        &lt;script src="assets/js/summernote/summernote.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Typed.js --&gt;
+        &lt;script src="assets/js/typed.min.js"&gt;&lt;/script&gt;
+        &lt;!-- Custom --&gt;
+        &lt;script src="assets/js/app.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+        <!--  html result end -->
+
+        <!--  css structure start -->
+        <section id="css-structure">
+            <h2>Css Structure</h2>
+            <p>Attachments, fonts and other CSS files <code>@import</code> are included in the page. You can reach it untouched by the <code>assets/sass/app.css</code> way.</p>
+            <p>SCSS should be used when writing custom CSS codes for this template . The file structure is like this.</p>
+            <pre>
+
+    - assets
+        - css <b>(Plugin and compiled SCSS/SASS files are found here)</b>
+        - sass <b>(SCSS/SASS files are found here)</b>
+            - components
+            - core <b>(Functions, variables, auxiliary classes are found here)</b>
+            - app.scss <b>(You can write your SCSS codes here)</b>
+        - config.rb <b>(SCSS configuration file)</b>
+            </pre>
+        </section>
+        <!--  css structure end -->
+
+        <!-- scss configuration start -->
+        <section id="scss-configuration">
+            <h2>SCSS/SASS Configuration</h2>
+            <p>To use Scss and Sass, you can <a target="_blank" href="http://sass-lang.com/install">sass-lang.com</a> instructions on the sass-lang.com link.</p>
+            <p>Compass is used for compilation. How to set up and to use these <a href="http://compass-style.org/help/" target="_blank">compass-style.org</a> you can see the link.</p>
+            <p>Our project <code>assets</code> folder is a project created with Compass. To view and compile Sass and Scss files there you can type this command at the command line and type the following command:</p>
+            <pre><code class="ruby">compass watch</code></pre>
+        </section>
+        <!-- scss configuration end -->
+
+        <!--  js structure start -->
+        <section id="js-structure">
+            <h2>Javascript</h2>
+            <p>All Javascript files <code>assets/js/</code> are located in the folder. The <code>app.js</code> file in this folder is for you to write Javascript codes.</p>
+        </section>
+        <!--  js structure end -->
+
+        <!--  Plugins start -->
+        <section id="plugins">
+            <h2>Plugins</h2>
+            <p>All add-ons <code>assets/js/</code> are located in the files folder. The file is used to activate the <code>app.js</code> plugins.</p>
+            <p>Add-ons used:</p>
+            <ul>
+                <li>Bootstrap slider</li>
+                <li>Owl Carousel</li>
+                <li>Summernote</li>
+                <li>Waves Effect</li>
+                <li>Animate.css</li>
+                <li>Scroll.js</li>
+                <li>Typed.js</li>
+            </ul>
+            <p>All plugin settings can be <code>assets/js/app.js</code> accessed from the file.</p>
+        </section>
+        <!--  Plugins end -->
+
+        <!--  Customize start -->
+        <section id="customize">
+            <h2>Customize</h2>
+            <p>Use <code>assets/sass/app.scss</code> when you need to write custom CSS codes. You can also <code>assets/sass/core/vars.scss</code> customize the template by changing the values ​​of the variables in the file.</p>
+            <p><b>Note:</b> You must compile after the changes you made in these files.</p>
+        </section>
+        <!--  Customize end -->
+
+        <!--  Variables start -->
+        <section id="variables">
+            <h2>Variables</h2>
+            <p>The most commonly used variables are contained in <code>assets/sass/vars.scss</code> this file. In this file you can adjust the basic components such as default theme color, default link color, Header , Section , Footer . Necessary explanations were made in this file.</p>
+        </section>
+        <!--  Variables end -->
+
+        <!--  Helper classes start -->
+        <section id="helper-classes">
+            <h2>Helper Classes</h2>
+            <p>There are helpful classes to make your job easier. With these classes you can get rid of inline CSS. You can see all helper <code>assets/sass/utility.scss</code> classes in the file. You can also add your own helper classes to this file.</p>
+            <p>Default helper class groups:</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="reset">
+                        <li>margin <code>m-*</code></li>
+                        <li>margin-top <code>m-t-*</code></li>
+                        <li>margin-bottom <code>m-b-*</code></li>
+                        <li>margin-left <code>m-l-*</code></li>
+                        <li>margin-right <code>m-r-*</code></li>
+                        <li>margin-top & margin-bottom <code>m-t-b-*</code></li>
+                        <li>margin-left & margin-right <code>m-l-r-*</code></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="reset">
+                        <li>padding <code>p-*</code></li>
+                        <li>padding-top <code>p-t-*</code></li>
+                        <li>padding-bottom <code>p-b-*</code></li>
+                        <li>padding-left <code>p-l-*</code></li>
+                        <li>padding-right <code>p-r-*</code></li>
+                        <li>padding-top & padding-bottom <code>p-t-b-*</code></li>
+                        <li>padding-left & padding-right <code>p-l-r-*</code></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="reset">
+                        <li>height <code>h-*</code></li>
+                        <li>font-size <code>f-s-*</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--  Helper classes end -->
+
+        <section id="Changelog">
+            <h2>Changelog</h2>
+            <p>03/15/2017 - v1.1</p>
+            <ul>
+                <li><b>Update</b>: Social buttons updated</li>
+                <li><b>Added</b>: New social buttons added</li>
+                <li><b>Update</b>: Updated search bars</li>
+                <li><b>Update</b>:Tabs components updated</li>
+                <li><b>Added</b>: New icon file added</li>
+                <li><b>Added</b>: New contact page added.</li>
+            </ul>
+            <p>03/08/2017 - v1.0 First Release</p>
+            <ul>
+                <li>First Release</li>
+            </ul>
+        </section>
+
+    </div>
+    <!-- ======== Script files ======== -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/highlight/highlight.pack.js"></script>
+    <script src="assets/js/doc.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

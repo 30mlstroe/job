@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sharple</title>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- Favicon -->
+    <link rel="Shortcut Icon"  href="../images/favicon.png"  type="image/x-icon">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Page loader start -->
+    <div class="page-loader"></div>
+    <!-- Page loader end -->
+    <!-- Header start -->
+    <header class="main-header">
+        <!-- Navbar start -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- Logo start -->
+                <a href="../sharple.html" class="navbar-brand">
+                    <img src="../images/sharple-logo.png" alt="...">
+                </a>
+                <!-- Logo end -->
+                <!-- Navs start -->
+                <div class="navs">
+                    <!-- Account nav start -->
+                    <ul class="nav navbar-nav account">
+						<li><a href="/myPage" role="button">마이페이지</a></li>                    
+						<li><a href="/myResume" role="button">내 이력서</a></li>                    
+						<li><a href="/logout" role="button">로그아웃</a></li>                    
+                    </ul>
+                    <!-- Account nav end -->
+                    <!-- Main nav start -->
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="sharple.html">맞춤 채용 정보</a>
+                        </li>
+                        <li>
+                            <a href="#">기업 & 연봉</a>
+                            <ul>
+                                <li>
+                                    <a href="#">기업 정보<i class="navbar-icon md-caret-right"></i></a>
+                                    <ul>
+                                        <li><a href="../companies.html">대기업</a></li>
+                                        <li><a href="../company-detail.html">중소기업</a></li>
+                                        <li><a href="../edit-company.html">Edit Company</a></li>
+                                        <li><a href="../resume-search.html">Search Resume</a></li>
+                                        <li><a href="../submit-jobs.html">Submit Job</a></li>
+                                        <li><a href="../manage-jobs.html">Manage Jobs</a></li>
+                                        <li><a href="../company-change-password.html">Change Your Password</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Job Seeker<i class="navbar-icon md-caret-right"></i></a>
+                                    <ul>
+                                        <li><a href="../job-detail-one.html">Job Detail One</a></li>
+                                        <li><a href="../job-detail-two.html">Job Detail Two</a></li>
+                                        <li><a href="../resume-detail.html">Resume Detail</a></li>
+                                        <li><a href="../create-resume.html">Create Resume</a></li>
+                                        <li><a href="../jobs-search.html">Job Search</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Account<i class="navbar-icon md-caret-right"></i></a>
+                                    <ul>
+                                        <li><a href="../login.html">Login</a></li>
+                                        <li><a href="../register.html">Register</a></li>
+                                        <li><a href="../forget.html">Forget</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../about.html">About Us</a></li>
+                                <li>
+                                    <a href="../contact-one.html">Contact<i class="navbar-icon md-caret-right"></i></a>
+                                    <ul>
+                                        <li><a href="../contact-one.html">Contact One</a></li>
+                                        <li><a href="../contact-two.html">Contact Two</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="404-page-one.html">404 Page<i class="navbar-icon md-caret-right"></i></a>
+                                    <ul>
+                                        <li><a href="404-page-one.html">404 Page One</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Main nav end -->
+                </div>
+                <!-- Navs end -->
+                <!-- Responsive nav button start -->
+                <ul class="nav navbar-nav responsive-btn">
+                    <li><a href="#"><i class="md-menu m-r-10"></i></a></li>
+                </ul>
+                <!-- Responsive nav button end -->
+            </div>
+        </nav>
+        <!-- Navbar end -->
+    </header>
+    <!-- Header end -->
+    <section class="page-header darken-2" style="background: url(../images/cover-2.jpg)">
+        <div class="container">
+            <header class="section-header text-white">
+                <h2>Job Search</h2>
+                <p>Find jobs that suit you</p>
+            </header>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon">
+                                <i class="md-tag"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Keyword: name, skills or tags">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon">
+                                <i class="md-pin"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Location: city, state or zip">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block btn-lg">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container">
+            <ul class="simple text-center">
+                <li class="col-sm-4 col-xs-12">
+                    <div class="circle-icon bg-blue lighten-2">
+                        <i class="icon md-pin"></i>
+                    </div>
+                    <h5>Create resume</h5>
+                    <p>Eu regione petentium pro. Eu sea suscipit referrentur. Id elit errem cum.</p>
+                </li>
+                <li class="col-sm-4 col-xs-12">
+                    <div class="circle-icon bg-green lighten-2">
+                        <i class="icon md-shield-security"></i>
+                    </div>
+                    <h5>Visiting job advertisements</h5>
+                    <p>Eu regione petentium pro. Eu sea suscipit referrentur. Id elit errem cum.</p>
+                </li>
+                <li class="col-sm-4 col-xs-12">
+                    <div class="circle-icon bg-orange lighten-2">
+                        <i class="icon md-seat"></i>
+                    </div>
+                    <h5>Make an application</h5>
+                    <p>Eu regione petentium pro. Eu sea suscipit referrentur. Id elit errem cum.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <header class="section-header">
+                <h3>Latest Jobs</h3>
+                <p>Newly Created Jobs</p>
+            </header>
+            <div class="card">
+                <div class="card-body">
+                    <div class="item-jobpost">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>
+                                    <a href="../job-detail.html">Full Stack Web Developer</a>
+                                </h5>
+                                <ul class="list-inline">
+                                    <li><a href="#"><img src="../images/logos/linkedin-logo.png" alt="">Linkedin</a></li>
+                                    <li><label class="label bg-green lighten-1">Freelance</label></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 jobpost-location">
+                                <span><i class="md-pin m-r-10"></i> Ankara - Turkey</span>
+                            </div>
+                            <div class="col-md-2 jobpost-apply-btn">
+                                <a href="#" class="btn btn-primary btn-block btn-outline btn-sm">Apply Now <i class="md-long-arrow-right m-l-10"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-jobpost">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>
+                                    <a href="./job-detail.html">Senior front-end developer</a>
+                                </h5>
+                                <ul class="list-inline">
+                                    <li><a href="#"><img src="../images/logos/envato-logo.png" alt="">Envato</a></li>
+                                    <li><label class="label bg-purple lighten-1">Part Time</label></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 jobpost-location">
+                                <span><i class="md-pin m-r-10"></i> Samsun - Turkey</span>
+                            </div>
+                            <div class="col-md-2 jobpost-apply-btn">
+                                <a href="#" class="btn btn-success btn-block btn-sm"><i class="md-check m-r-10"></i>Applied</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-jobpost">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>
+                                    <a href="../job-detail.html">Software Engineer (Entry or Senior)</a>
+                                </h5>
+                                <ul class="list-inline">
+                                    <li><a href="#"><img src="../images/logos/twitter-logo.png" alt="">Twitter</a></li>
+                                    <li><label class="label bg-blue lighten-1">Full Time</label></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 jobpost-location">
+                                <span><i class="md-pin m-r-10"></i> Ordu - Turkey</span>
+                            </div>
+                            <div class="col-md-2 jobpost-apply-btn">
+                                <a href="#" class="btn btn-primary btn-block btn-outline btn-sm">Apply Now <i class="md-long-arrow-right m-l-10"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-jobpost">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>
+                                    <a href="../job-detail.html">Web Applications Developer</a>
+                                </h5>
+                                <ul class="list-inline">
+                                    <li><a href="#"><img src="../images/logos/google-logo.png" alt="">Google</a></li>
+                                    <li><label class="label bg-green lighten-1">Freelance</label></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 jobpost-location">
+                                <span><i class="md-pin m-r-10"></i> İstanbul - Turkey</span>
+                            </div>
+                            <div class="col-md-2 jobpost-apply-btn">
+                                <a href="#" class="btn btn-primary btn-block btn-outline btn-sm">Apply Now <i class="md-long-arrow-right m-l-10"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-jobpost">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>
+                                    <a href="../job-detail.html">Software and technical support specialist</a>
+                                </h5>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"><img src="../images/logos/github-logo.png" alt="">Github</a>
+                                    </li>
+                                    <li><label class="label bg-green lighten-1">Full Time</label></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 jobpost-location">
+                                <span><i class="md-pin m-r-10"></i> İstanbul - Turkey</span>
+                            </div>
+                            <div class="col-md-2 jobpost-apply-btn">
+                                <a href="#" class="btn btn-primary btn-block btn-outline btn-sm">Apply Now <i class="md-long-arrow-right m-l-10"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                <a href="#" class="btn btn-primary btn-block m-t-20">Other Jobs</a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container">
+            <header class="section-header">
+                <h3>Job Categories</h3>
+                <p>We list popular business categories here</p>
+            </header>
+            <ul class="simple category-list">
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Health (30)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Textile (30)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Secretary / Executive Assistant (2.042)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Store / Retail (11)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Marketing / Advertising (96)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Accounting / Finance (30)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Building / Architect / Construction (23)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Logistics / Transportation / Warehouse</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Education</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Information (64)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Tourism / Food / Service</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Bank / Insurance (63)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Human Resources / Management (213)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Internship / New Graduate / Part-Time</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Security (30)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Information (30)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Tourism / Food / Service</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Bank / Insurance (31)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Human Resources / Management (56)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Internship / New Graduate (754)</a>
+                </li>
+                <li class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="#"><i class="md-chevron-right m-r-10"></i>Security (875)</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <header class="section-header">
+                <h3>Jobs You Applied</h3>
+                <p>You applied for 3 job postings</p>
+            </header>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <a href="#">
+                                        <img src="../images/logos/facebook-logo.png" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-xs-9">
+                                    <h5>
+                                        <a href="#">Full Stack JavaScript Architect</a>
+                                    </h5>
+                                    <ul class="simple list-inline">
+                                        <li>Twitter</li>
+                                        <li>
+                                            <span class="label label-danger">Part Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <a href="#">
+                                        <img src="../images/logos/google-logo.png" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-xs-9">
+                                    <h5>
+                                        <a href="#">Front End Javascript Engineer</a>
+                                    </h5>
+                                    <ul class="simple list-inline">
+                                        <li>Google</li>
+                                        <li>
+                                            <span class="label label-info">Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <a href="#">
+                                        <img src="../images/logos/twitter-logo.png" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-xs-9">
+                                    <h5>
+                                        <a href="#">Experienced Frontend Engineer</a>
+                                    </h5>
+                                    <ul class="simple list-inline">
+                                        <li>Twitter</li>
+                                        <li>
+                                            <span class="label label-success">Freelance</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container">
+            <header class="section-header">
+                <h3>Latest Posts</h3>
+                <p>The most recent post is here</p>
+            </header>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="card bg-grey lighten-4">
+                            <img src="../images/post/post-1.jpg" alt="...">
+                            <div class="card-body">
+                                <h5 class="m-b-0">New developments in the business world</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="card bg-grey lighten-4">
+                            <img src="../images/post/post-3.jpg" alt="...">
+                            <div class="card-body">
+                                <h5 class="m-b-0">How should the resume be? What should be considered?</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="card bg-grey lighten-4">
+                            <img src="../images/post/post-4.jpg" alt="...">
+                            <div class="card-body">
+                                <h5 class="m-b-0">How should the advertising work be done?</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-sm-6 hidden-xs text-center">
+                            <img src="../images/mobile.png" alt="mobile">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="m-t-50 hidden-xs"></div>
+                            <h3 class="m-b-20">Have you seen my mobile app?</h3>
+                            <div class="content-row">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type scrambled it to make a type specimen book.</p>
+                            </div>
+                            <a href="#" class="app-button">
+                                <i class="md-google-play icon"></i>
+                                <span>Download on the</span>
+                                <span>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container">
+            <header class="section-header">
+                <h3>References</h3>
+                <p>Our references are here</p>
+            </header>
+            <div class="owl-carousel">
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-1.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-2.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-3.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-4.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-5.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-6.png" alt="...">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="../images/references/logo-7.png" alt="...">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="darken-3" style="background: url(../images/cover-1.jpg)">
+        <div class="container">
+            <header class="section-header text-white">
+                <h3>Subscription</h3>
+                <p>To register for an email newsletter, register your email address</p>
+            </header>
+            <div class="col-md-6 col-md-offset-3">
+                <form>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">
+                            <i class="md-email"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Write and send email address">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Submit</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Company</h5>
+                    <p>Lorem ipsum dolor sit amet, eam verear dignissim ne, legere altera ex sit. Magna rationibus efficiantur vel at, cum cu iudico atomorum. Tale habemus molestie an sea, ne virtute dissentiet his, at sea ipsum insolens. Vitae doctus discere qui ne, enim iudico at pro, no sed modus omnes dolorem. Assum ubique equidem in eos. Putent maiestatis in ius.</p>
+                    <p>Vitae doctus discere qui ne, enim iudico at pro, no sed modus omnes dolorem. Assum ubique equidem in eos. Putent maiestatis in ius.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact with us</h5>
+                    <p>Manchester Road 123-78B, <br> Silictown</p>
+                    <p>+46 123 456 789</p>
+                    <p>info@sitename.com</p>
+                    <p>http://www.sitename.com</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Popular jobs</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="md-caret-right m-r-10"></i>Experienced Frontend Engineer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="md-caret-right m-r-10"></i>React.js Developer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="md-caret-right m-r-10"></i>Front End Javascript Engineer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="md-caret-right m-r-10"></i>PHP/Drupal developer for legacy ecommerce site
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="sm">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <ul class="social-icons social-icons-sm">
+                        <li><a href="#" class="facebook"><i class="md-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="md-twitter"></i></a></li>
+                        <li><a href="#" class="google"><i class="md-google"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="md-linkedin"></i></a></li>
+                        <li><a href="#" class="flickr"><i class="md-flickr"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <p class="copyright">Copyrights © 2017 All Rights Reserved by</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <!-- ================= Script files ================= -->
+    <script type="text/javascript">
+    function pop_profile(){
+    	var userProfile = sessionStorage.getItem("userInfo");
+    }
+    </script>
+    
+    <!-- Jquery -->
+    <script src="../js/jquery/jquery.min.js"></script>
+    <!-- Jquery ui -->
+    <script src="../js/jquery/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <!-- Bootstrap slider -->
+    <script src="../js/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!-- Waves effect -->
+    <script src="../js/waves/waves.min.js"></script>
+    <!-- Scroll animate effect -->
+    <script src="../js/scroll.js"></script>
+    <!-- Owl carousel -->
+    <script src="../js/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Summernote editor -->
+    <script src="../js/summernote/summernote.min.js"></script>
+    <!-- Typed.js -->
+    <script src="../js/typed.min.js"></script>
+    <!-- Custom -->
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Nav */
+
+@charset "UTF-8";
+
+// nav
+nav.navbar {
+   @include box-shadow(0 0 0 0 white);
+   @include border-radius(0);
+   border:none;
+   height:$navbar-height;
+   margin: 0;
+   background: white;
+   &.sensitive-navbar {
+      height:$navbar-height - 20;
+      & .navbar-brand {
+         line-height: $navbar-height - 20;
+         height:$navbar-height - 20;
+         & img {
+            width : 80px;
+         }
+      }
+      & ul {
+         & > li {
+            & > a {
+               height:$navbar-height - 20;
+               line-height: $navbar-height - 20;
+            }
+            & > ul {
+               top: $navbar-height - 20;
+            }
+         }
+      }
+   }
+   & .navbar-brand {
+      line-height: $navbar-height;
+      height:$navbar-height;
+      padding: 0 15px;
+      display: table;
+      float: left;
+      & img {
+         width : 90px;
+         display: inline-block;
+         vertical-align: middle;
+      }
+   }
+   & ul.navbar-nav {
+      border:none;
+      height:$navbar-height;
+      background: inherit;
+      display: block;
+      float: none;
+      text-align: center;
+      &.account {
+         float: right;
+      }
+      &.responsive-btn {
+         display: none;
+         float: right;
+         & a {
+            font-size : 30px;
+         }
+      }
+      & > li {
+         position: relative;
+         display: inline-block;
+         float: none;
+         & > a {
+            height:$navbar-height;
+            padding: 0 15px;
+            font-size : 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: $navbar-height;
+            color:#777777;
+            &:hover, &:active, &:focus {
+               background: inherit;
+            }
+         }
+         & ul {
+            opacity: 0;
+            visibility: hidden;
+            padding: 10px 0;
+            text-align: left;
+            width:220px;
+            position: absolute;
+            top:$navbar-height + 5;
+            @include background-opacity($nav-dropdown-menu-bg, $nav-dropdown-menu-bg-opacity);
+            z-index: 3;
+            @include transition(all .2s);
+            & li {
+               position: relative;
+               list-style-type: none;
+               & a {
+                  display: block;
+                  padding: 2px 20px;
+                  font-size: 14px;
+                  color: $nav-dropdown-menu-bg + 150;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  & .navbar-icon {
+                     float:right;
+                     margin-left: 10px;
+                  }
+                  & span {
+                     float:right;
+                     color : $nav-dropdown-menu-bg + 300;
+                  }
+                  &:hover, &:active, &:focus {
+                     background: inherit;
+                     color : $nav-dropdown-menu-bg + 300;
+                  }
+               }
+               & ul {
+                  opacity: 0;
+                  visibility: hidden;
+                  padding: 10px 0;
+                  text-align: left;
+                  width:220px;
+                  left:220px;
+                  top:5px;
+                  position: absolute;
+                  z-index: 3;
+               }
+            }
+         }
+         &:hover > ul, & > ul li:hover > ul {
+            opacity: 1;
+            visibility: visible;
+         }
+         &:hover > ul {
+            top:$navbar-height;
+         }
+         & > ul li:hover > ul {
+            top:0;
+         }
+      }
+   }
+}

@@ -1,0 +1,438 @@
+// Colors
+
+@charset "UTF-8";
+
+// White
+.bg-white {
+   background: white !important;
+}
+
+// Green
+.bg-green {
+   background: $green !important;
+   &.lighten-1 {
+      background: $green + 20 !important;
+   }
+   &.lighten-2 {
+      background: $green + 40 !important;
+   }
+   &.lighten-3 {
+      background: $green + 60 !important;
+   }
+   &.lighten-4 {
+      background: $green + 80 !important;
+   }
+   &.lighten-5 {
+      background: $green + 100 !important;
+   }
+   &.darken-1 {
+      background: $green - 20 !important;
+   }
+   &.darken-2 {
+      background: $green - 40 !important;
+   }
+   &.darken-3 {
+      background: $green - 60 !important;
+   }
+   &.darken-4 {
+      background: $green - 80 !important;
+   }
+   &.darken-5 {
+      background: $green - 100 !important;
+   }
+}
+
+// Blue
+.bg-blue {
+   background: $blue !important;
+   &.lighten-1 {
+      background: $blue + 20 !important;
+   }
+   &.lighten-2 {
+      background: $blue + 40 !important;
+   }
+   &.lighten-3 {
+      background: $blue + 60 !important;
+   }
+   &.lighten-4 {
+      background: $blue + 80 !important;
+   }
+   &.lighten-5 {
+      background: $blue + 100 !important;
+   }
+   &.darken-1 {
+      background: $blue - 20 !important;
+   }
+   &.darken-2 {
+      background: $blue - 40 !important;
+   }
+   &.darken-3 {
+      background: $blue - 60 !important;
+   }
+   &.darken-4 {
+      background: $blue - 80 !important;
+   }
+   &.darken-5 {
+      background: $blue - 100 !important;
+   }
+}
+
+// Red
+.bg-red {
+   background: $red !important;
+   &.lighten-1 {
+      background: $red + 20 !important;
+   }
+   &.lighten-2 {
+      background: $red + 40 !important;
+   }
+   &.lighten-3 {
+      background: $red + 60 !important;
+   }
+   &.lighten-4 {
+      background: $red + 80 !important;
+   }
+   &.lighten-5 {
+      background: $red + 100 !important;
+   }
+   &.darken-1 {
+      background: $red - 20 !important;
+   }
+   &.darken-2 {
+      background: $red - 40 !important;
+   }
+   &.darken-3 {
+      background: $red - 60 !important;
+   }
+   &.darken-4 {
+      background: $red - 80 !important;
+   }
+   &.darken-5 {
+      background: $red - 100 !important;
+   }
+}
+
+// Orange
+.bg-orange {
+   background: $orange !important;
+   &.lighten-1 {
+      background: $orange + 20 !important;
+   }
+   &.lighten-2 {
+      background: $orange + 40 !important;
+   }
+   &.lighten-3 {
+      background: $orange + 60 !important;
+   }
+   &.lighten-4 {
+      background: $orange + 80 !important;
+   }
+   &.lighten-5 {
+      background: $orange + 100 !important;
+   }
+   &.darken-1 {
+      background: $orange - 20 !important;
+   }
+   &.darken-2 {
+      background: $orange - 40 !important;
+   }
+   &.darken-3 {
+      background: $orange - 60 !important;
+   }
+   &.darken-4 {
+      background: $orange - 80 !important;
+   }
+   &.darken-5 {
+      background: $orange - 100 !important;
+   }
+}
+
+// Pink
+.bg-pink {
+   background: $pink !important;
+   &.lighten-1 {
+      background: $pink + 20 !important;
+   }
+   &.lighten-2 {
+      background: $pink + 40 !important;
+   }
+   &.lighten-3 {
+      background: $pink + 60 !important;
+   }
+   &.lighten-4 {
+      background: $pink + 80 !important;
+   }
+   &.lighten-5 {
+      background: $pink + 100 !important;
+   }
+   &.darken-1 {
+      background: $pink - 20 !important;
+   }
+   &.darken-2 {
+      background: $pink - 40 !important;
+   }
+   &.darken-3 {
+      background: $pink - 60 !important;
+   }
+   &.darken-4 {
+      background: $pink - 80 !important;
+   }
+   &.darken-5 {
+      background: $pink - 100 !important;
+   }
+}
+
+// Purple
+.bg-purple {
+   background: $purple !important;
+   &.lighten-1 {
+      background: $purple + 20 !important;
+   }
+   &.lighten-2 {
+      background: $purple + 40 !important;
+   }
+   &.lighten-3 {
+      background: $purple + 60 !important;
+   }
+   &.lighten-4 {
+      background: $purple + 80 !important;
+   }
+   &.lighten-5 {
+      background: $purple + 100 !important;
+   }
+   &.darken-1 {
+      background: $purple - 20 !important;
+   }
+   &.darken-2 {
+      background: $purple - 40 !important;
+   }
+   &.darken-3 {
+      background: $purple - 60 !important;
+   }
+   &.darken-4 {
+      background: $purple - 80 !important;
+   }
+   &.darken-5 {
+      background: $purple - 100 !important;
+   }
+}
+
+// Teal
+.bg-teal {
+   background: $teal !important;
+   &.lighten-1 {
+      background: $teal + 20 !important;
+   }
+   &.lighten-2 {
+      background: $teal + 40 !important;
+   }
+   &.lighten-3 {
+      background: $teal + 60 !important;
+   }
+   &.lighten-4 {
+      background: $teal + 80 !important;
+   }
+   &.lighten-5 {
+      background: $teal + 100 !important;
+   }
+   &.darken-1 {
+      background: $teal - 20 !important;
+   }
+   &.darken-2 {
+      background: $teal - 40 !important;
+   }
+   &.darken-3 {
+      background: $teal - 60 !important;
+   }
+   &.darken-4 {
+      background: $teal - 80 !important;
+   }
+   &.darken-5 {
+      background: $teal - 100 !important;
+   }
+}
+
+// Lime
+.bg-lime {
+   background: $lime !important;
+   &.lighten-1 {
+      background: $lime + 20 !important;
+   }
+   &.lighten-2 {
+      background: $lime + 40 !important;
+   }
+   &.lighten-3 {
+      background: $lime + 60 !important;
+   }
+   &.lighten-4 {
+      background: $lime + 80 !important;
+   }
+   &.lighten-5 {
+      background: $lime + 100 !important;
+   }
+   &.darken-1 {
+      background: $lime - 20 !important;
+   }
+   &.darken-2 {
+      background: $lime - 40 !important;
+   }
+   &.darken-3 {
+      background: $lime - 60 !important;
+   }
+   &.darken-4 {
+      background: $lime - 80 !important;
+   }
+   &.darken-5 {
+      background: $lime - 100 !important;
+   }
+}
+
+// Brown
+.bg-brown {
+   background: $brown !important;
+   &.lighten-1 {
+      background: $brown + 20 !important;
+   }
+   &.lighten-2 {
+      background: $brown + 40 !important;
+   }
+   &.lighten-3 {
+      background: $brown + 60 !important;
+   }
+   &.lighten-4 {
+      background: $brown + 80 !important;
+   }
+   &.lighten-5 {
+      background: $brown + 100 !important;
+   }
+   &.darken-1 {
+      background: $brown - 20 !important;
+   }
+   &.darken-2 {
+      background: $brown - 40 !important;
+   }
+   &.darken-3 {
+      background: $brown - 60 !important;
+   }
+   &.darken-4 {
+      background: $brown - 80 !important;
+   }
+   &.darken-5 {
+      background: $brown - 100 !important;
+   }
+}
+
+// Grey
+.bg-grey {
+   background: $grey !important;
+   &.lighten-1 {
+      background: $grey + 20 !important;
+   }
+   &.lighten-2 {
+      background: $grey + 40 !important;
+   }
+   &.lighten-3 {
+      background: $grey + 60 !important;
+      color : #555555
+   }
+   &.lighten-4 {
+      background: $grey + 80 !important;
+      color : #555555
+   }
+   &.lighten-5 {
+      background: $grey + 100 !important;
+      color : #555555
+   }
+   &.darken-1 {
+      background: $grey - 20 !important;
+   }
+   &.darken-2 {
+      background: $grey - 40 !important;
+   }
+   &.darken-3 {
+      background: $grey - 60 !important;
+   }
+   &.darken-4 {
+      background: $grey - 80 !important;
+   }
+   &.darken-5 {
+      background: $grey - 100 !important;
+   }
+}
+
+/*
+   Text colors
+*/
+
+.text-black {
+   &, & * {
+      color : #444444 !important;
+   }
+}
+
+.text-white {
+   &, & * {
+      color : white !important;
+   }
+}
+
+.text-green {
+   &, & * {
+      color : $green !important;
+   }
+}
+
+.text-blue {
+   &, & * {
+      color : $blue !important;
+   }
+}
+
+.text-lime {
+   &, & * {
+      color : $lime !important;
+   }
+}
+
+.text-red {
+   &, & * {
+      color : $red !important;
+   }
+}
+
+.text-purple {
+   &, & * {
+      color : $purple !important;
+   }
+}
+
+.text-pink {
+   &, & * {
+      color : $pink !important;
+   }
+}
+
+.text-teal {
+   &, & * {
+      color : $teal !important;
+   }
+}
+
+.text-brown {
+   &, & * {
+      color : $brown !important;
+   }
+}
+
+.text-orange {
+   &, & * {
+      color : $orange !important;
+   }
+}
+
+.text-grey {
+   &, & * {
+      color : $grey !important;
+   }
+}
+

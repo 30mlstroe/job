@@ -1,0 +1,60 @@
+/* Alert */
+
+@charset "UTF-8";
+
+.alert {
+   padding : 15px 20px;
+   @include border-radius(3px);
+   border:none;
+   &.alert-success {
+      background: $success;
+   }
+   &.alert-info {
+      background: $info;
+   }
+   &.alert-warning {
+      background: $warning;
+   }
+   &.alert-danger {
+      background: $danger;
+   }
+   &.alert-dismissible .close {
+      right: 0;
+      opacity: 1;
+      text-shadow: 0 0 0 white;
+      margin-top: 5px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size : 16px;
+   }
+   & a {
+      text-decoration: underline;
+   }
+}
+
+.callout {
+   padding : 15px 20px;
+   margin-bottom: 20px;
+   background: #f9f9f9;
+   &.callout-success {
+      border-left: 3px solid $green;
+      color : $green
+   }
+   &.callout-info {
+      border-left: 3px solid $blue;
+      color : $blue;
+   }
+   &.callout-warning {
+      border-left: 3px solid $orange;
+      color : $orange;
+   }
+   &.callout-danger {
+      border-left: 3px solid $red;
+      color : $red;
+   }
+   & a {
+      text-decoration: underline;
+   }
+}

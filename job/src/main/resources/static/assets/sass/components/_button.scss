@@ -1,0 +1,374 @@
+/* Button */
+
+@charset "UTF-8";
+
+$btn-font-size : 16px;
+$btn-height : 45px;
+
+.btn {
+   @include border-radius(3px);
+   background: inherit;
+   color : #555555;
+   padding : 0 20px;
+   height:$btn-height;
+   line-height: $btn-height;
+   border:none;
+   font-size : $btn-font-size;
+   @include transition(background .2s);
+   &:active, &:focus, &:hover {
+      outline: none !important;
+   }
+   &.btn-file {
+      position: relative;
+      cursor: pointer;
+      & [class^="md-"], & [class^="fa"] {
+         vertical-align: top;
+      }
+      & input[type=file] {
+         cursor: pointer;
+         position: absolute;
+         bottom:0;
+         top:0;
+         left:0;
+         right:0;
+         width: 100%;
+         opacity: 0;
+      }
+   }
+   &.btn-outline {
+      background: inherit;
+      color : #555555;
+      &:active, &:focus, &:hover {
+         background: inherit;
+         outline: none;
+      }
+   }
+   &:active, &:focus, &:hover {
+      outline: none;
+      @include box-shadow(0 0 0 0 white)
+   }
+   &.btn-default {
+      background: $grey;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $grey;
+         color : #555555;
+         &:active, &:focus, &:hover {
+            background: $grey;
+            outline: none;
+            color : white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $grey;
+         color : white;
+         outline: none;
+      }
+   }
+   &.btn-primary {
+      background: $theme-color;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $theme-color;
+         color : $theme-color;
+         &:active, &:focus, &:hover {
+            color  :white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $theme-color;
+         outline: none;
+      }
+   }
+   &.btn-danger {
+      background: $red;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $red;
+         color : $red;
+         &:active, &:focus, &:hover {
+            color  :white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $red;
+         outline: none;
+      }
+   }
+   &.btn-info {
+      background: $blue;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $blue;
+         color : $blue;
+         &:active, &:focus, &:hover {
+            color  :white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $blue;
+         outline: none;
+      }
+   }
+   &.btn-success {
+      background: $green;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $green;
+         color : $green;
+         &:active, &:focus, &:hover {
+            color  :white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $green;
+         outline: none;
+      }
+   }
+   &.btn-warning {
+      background: $orange;
+      color : white;
+      &.btn-outline {
+         background: inherit;
+         border : 1px solid $orange;
+         color : $orange;
+         &:active, &:focus, &:hover {
+            color  :white;
+         }
+      }
+      &:active, &:focus, &:hover {
+         background: $orange;
+         outline: none;
+      }
+   }
+   &.btn-float {
+      @include border-radius(50%);
+      padding: 0 !important;
+      height:$btn-height;
+      width:$btn-height;
+      line-height: $btn-height;
+      & .icon {
+         margin: 0 !important;
+      }
+      &.btn-xs {
+         height:$btn-height - 20;
+         width:$btn-height - 20;
+         line-height: $btn-height - 20;
+      }
+      &.btn-sm {
+         height:$btn-height - 10;
+         width:$btn-height - 10;
+         line-height: $btn-height - 10;
+      }
+      &.btn-lg {
+         height:$btn-height + 10;
+         width:$btn-height + 10;
+         line-height: $btn-height + 10;
+
+      }
+   }
+   &.btn-round {
+      @include border-radius(200px);
+   }
+   & .icon {
+      vertical-align: middle;
+      font-size : 16px;
+      margin-right:5px;
+      margin-top: -2px;
+   }
+   &.btn-xs {
+      padding : 0 8px;
+      height:$btn-height - 20;
+      line-height: $btn-height - 22;
+      font-size : $btn-font-size - 4;
+      & .icon {
+         font-size : 12px !important;
+      }
+   }
+   &.btn-sm {
+      padding : 0 10px;
+      height:$btn-height - 10;
+      line-height: $btn-height - 12;
+      font-size : $btn-font-size - 2;
+      & .icon {
+         font-size : 12px !important;
+      }
+   }
+   &.btn-lg {
+      padding : 0 30px;
+      height:$btn-height + 10;
+      line-height: $btn-height + 8;
+      font-size : $btn-font-size + 2;
+      & .icon {
+         font-size : 20px !important;
+         margin-right:7px;
+      }
+   }
+}
+
+/* App buttons */
+a.app-button {
+   position: relative;
+   display: inline-block;
+   background: $theme-color;
+   color : white;
+   height: 70px;
+   width:235px;
+   text-align: left;
+   padding: 6px 20px 20px 70px;
+   @include border-radius(5px);
+   @include box-shadow($shadow);
+   & .icon {
+      font-size : 50px;
+      float:left;
+      position: absolute;
+      left:20px;
+      top:22px;
+   }
+   & span {
+      display: block;
+      &:last-child {
+         font-size : 25px;
+         font-weight: bold;
+      }
+   }
+   &:hover, &:active, &:focus {
+      background: $theme-color + 20;
+      color : white;
+   }
+}
+
+/* Social buttons */
+ul.social-icons {
+   padding: 0;
+   margin: 0;
+   & li {
+      display: inline-block;
+      margin-right: 10px;
+      list-style-type: none;
+      &:last-child {
+         margin-right: 0;
+      }
+      & a {
+         width : $btn-height;
+         height: $btn-height;
+         text-align: center;
+         display: inline-block;
+         color : white !important;
+         font-size : $btn-font-size;
+         @include border-radius(50%);
+         line-height: $btn-height;
+         &.facebook {
+            background: $facebook;
+            &:hover, &:active, &:focus {
+               background: $facebook;
+            }
+         }
+         &.twitter {
+            background: $twitter;
+            &:hover, &:active, &:focus {
+               background: $twitter;
+            }
+         }
+         &.google {
+            background: $google;
+            &:hover, &:active, &:focus {
+               background: $google;
+            }
+         }
+         &.youtube {
+            background: $youtube;
+            &:hover, &:active, &:focus {
+               background: $youtube;
+            }
+         }
+         &.instagram {
+            background: $instagram;
+            &:hover, &:active, &:focus {
+               background: $instagram;
+            }
+         }
+         &.dribbble {
+            background: $dribbble;
+            &:hover, &:active, &:focus {
+               background: $dribbble;
+            }
+         }
+         &.skype {
+            background: $skype;
+            &:hover, &:active, &:focus {
+               background: $skype;
+            }
+         }
+         &.linkedin {
+            background: $linkedin;
+            &:hover, &:active, &:focus {
+               background: $linkedin;
+            }
+         }
+         &.flickr {
+            background: $flickr;
+            &:hover, &:active, &:focus {
+               background: $flickr;
+            }
+         }
+         &.whatsapp {
+            background: $whatsapp;
+            &:hover, &:active, &:focus {
+               background: $whatsapp;
+            }
+         }
+      }
+   }
+   &.pull-right li {
+      margin: 0;
+      margin-left: 10px !important;
+   }
+   &:after {
+      content : '';
+      display: inline-block;
+      clear:both;
+   }
+   &.social-icons-xs {
+      & li {
+         & a {
+            width : $btn-height - 20;
+            height: $btn-height - 20;
+            font-size : $btn-font-size - 3;
+            line-height: $btn-height - 20;
+         }
+      }
+   }
+   &.social-icons-sm {
+      & li {
+         & a {
+            width : $btn-height - 10;
+            height: $btn-height - 10;
+            font-size : $btn-font-size - 2;
+            line-height: $btn-height - 10;
+         }
+      }
+   }
+   &.social-icons-lg {
+      & li {
+         & a {
+            width : $btn-height + 10;
+            height: $btn-height + 10;
+            font-size : $btn-font-size + 5;
+            line-height: $btn-height + 10
+         }
+      }
+   }
+   &.social-icons-round {
+      & li {
+         & a {
+            @include border-radius(8px);
+         }
+      }
+   }
+}

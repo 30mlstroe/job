@@ -1,0 +1,192 @@
+/* Section */
+
+@charset "UTF-8";
+
+// Sections
+section {
+   width:100%;
+   position: relative;
+   padding: 40px 0;
+   &.page-header {
+      border: none;
+      margin: 0;
+      text-align: center;
+      padding: 100px 0;
+      & h1, & h2 {
+         margin-bottom: 5px !important;
+      }
+      & .page-header-logo {
+         @include border-radius(50%);
+         margin-bottom: 20px;
+         width:120px;
+         @include box-shadow($shadow)
+      }
+   }
+   &.main-page-header {
+      text-align: center;
+      padding : 200px 0;
+      & .container {
+         position: relative;
+         z-index: 2;
+      }
+      & h1, & h2 {
+         margin-bottom: 5px
+      }
+      & .page-header-logo {
+         @include border-radius(50%);
+         margin-bottom: 20px;
+         width:120px;
+         @include box-shadow($shadow)
+      }
+   }
+   &.error-page {
+      & h2 {
+         font-size : 150px;
+         line-height: 150px;
+      }
+      & h6 {
+         font-size : 13px;
+      }
+   }
+   & header.section-header {
+      margin-bottom: 40px;
+      text-align: center;
+      & p {
+         text-transform: uppercase;
+         font-size: 12px;
+         letter-spacing: 1px;
+         color : $grey - 20;
+         margin: 0;
+         &:after {
+            content:"\2014";
+            margin-left: 8px;
+         }
+         &:before {
+            content:"\2014";
+            margin-right: 8px;
+         }
+      }
+      &.text-left {
+         text-align: left;
+         p {
+            &:after {
+               content:'';
+            }
+            &:before {
+               content:"\2014";
+               margin-right: 8px;
+            }
+         }
+      }
+      &.text-right {
+         text-align: right;
+         p {
+            &:before {
+               content:"";
+            }
+            &:after {
+               content:"\2014";
+               margin-left: 8px;
+            }
+         }
+      }
+   }
+   & ul.page-header-menu {
+      overflow: hidden;
+      height:55px;
+      padding: 0;
+      text-align: left;
+      margin-top: 100px;
+      @include background-opacity(white, .5);
+      & li {
+         padding: 0;
+         float: left;
+         list-style-type: none;
+         &.active a {
+            @include background-opacity(white, .2);
+            color : #222222;
+         }
+         & a {
+            text-transform: uppercase;
+            font-size : 13px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin: 0;
+            display: inline-block;
+            padding: 0 20px;
+            line-height: 55px;
+            height:55px;
+            color : #555555;
+            &:hover, &:active, &:focus {
+               @include background-opacity(white, .2);
+               color : #222222;
+            }
+         }
+         &:first-child a {
+            padding-left: 30px;
+         }
+      }
+   }
+}
+
+section, footer {
+   position: relative;
+   background-attachment: fixed !important;
+   background-size: cover !important;
+   background-position: 50% 0 !important;
+   &:after {
+      content:'';
+      position: absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      z-index: 1;
+      display: none;
+   }
+   & .container {
+      position: relative;
+      z-index: 2;
+   }
+   &.darken-1:after {
+      @include background-opacity(black, .1);
+      display: block;
+   }
+   &.darken-2:after {
+      @include background-opacity(black, .3);
+      display: block;
+   }
+   &.darken-3:after {
+      @include background-opacity(black, .5);
+      display: block;
+   }
+   &.darken-4:after {
+      @include background-opacity(black, .7);
+      display: block;
+   }
+   &.darken-5:after {
+      @include background-opacity(black, .9);
+      display: block;
+   }
+   // lighten
+   &.lighten-1:after {
+      @include background-opacity(white, .1);
+      display: block;
+   }
+   &.lighten-2:after {
+      @include background-opacity(white, .3);
+      display: block;
+   }
+   &.lighten-3:after {
+      @include background-opacity(white, .5);
+      display: block;
+   }
+   &.lighten-4:after {
+      @include background-opacity(white, .7);
+      display: block;
+   }
+   &.lighten-5:after {
+      @include background-opacity(white, .9);
+      display: block;
+   }
+}

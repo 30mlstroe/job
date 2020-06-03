@@ -1,0 +1,128 @@
+@import "../css/bootstrap/bootstrap.min.css";
+@import "../css/bootstrap/bootstrap-theme.min.css";
+@import "../icons/material/material-design.min.css";
+@import "../js/highlight/styles/zenburn.css";
+
+$theme-color : #00ccff;
+
+html, body {
+   height:100%;
+}
+
+body {
+   position: relative;
+   font-family: Arial;
+}
+
+ul {
+   &.reset {
+      margin: 0;
+      padding: 0;
+      & li {
+         list-style-type: none;
+      }
+   }
+   & li {
+      padding-bottom: 10px;
+   }
+}
+
+.bootstrap-sidebar {
+   overflow: auto;
+   overflow-x: hidden;
+   padding:0;
+   background: #eeeeee;
+   position: fixed;
+   width: 20%;
+   top:0;
+   left:0;
+   bottom:0;
+   z-index: 999;
+   & ul {
+      padding: 0;
+      float:none;
+      & li {
+         list-style-type: none;
+         float:none;
+         padding: 0;
+         & a {
+            display:block;
+            padding: 10px 30px;
+            text-decoration: none;
+            text-align: right;
+            color:#555555;
+            &:hover, &:active, &:focus {
+               background: #dddddd;
+               color:black;
+            }
+         }
+         &.active > a {
+            font-weight:600;
+         }
+         & ul {
+            display: none;
+            & li {
+               & a {
+                  border-right:4px solid $theme-color - 80;
+                  padding-right: 26px;
+               }
+               & ul li a {
+                  border-color:orangered + 50;
+               }
+            }
+         }
+      }
+   }
+}
+
+.main-content {
+   margin-left:20%;
+   height:100%;
+   & h1, & h2, & h3, & h4, & h5, & h6 {
+      margin:0;
+      padding:0;
+      padding-bottom: 20px;
+   }
+   & section {
+      padding: 20px 50px;
+      &:first-child {
+         display: table;
+         width:100%;
+         background: $theme-color - 20;
+         padding: 0 50px;
+         color : white;
+         font-size : 16px;
+         height:100%;
+         & h1 {
+            font-size : 45px;
+         }
+         & h4 {
+            line-height: 30px;
+         }
+         & article {
+            display: table-cell;
+            vertical-align: middle;
+         }
+      }
+   }
+}
+
+pre {
+   padding : 0;
+   border:none;
+   & code {
+      padding: 1.3em !important;
+   }
+}
+
+@media (max-width: 768px) {
+
+   .bootstrap-sidebar {
+      width:40%
+   }
+
+   .main-content {
+      margin-left: 40%;
+   }
+
+}

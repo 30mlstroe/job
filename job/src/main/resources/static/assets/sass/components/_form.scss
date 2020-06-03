@@ -1,0 +1,204 @@
+/* Form element */
+
+@charset "UTF-8";
+
+textarea {
+   max-width: 100%;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.input-group {
+   margin-bottom: 20px;
+   width: 100%;
+   & .input-group-addon {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      z-index:4;
+      padding: 0 20px;
+      line-height: 47px;
+      width:auto;
+      border:none;
+      background: none;
+      font-size:20px;
+      color : $grey + 30;
+      & + .form-control {
+         padding-left: 47px;
+      }
+   }
+   & .input-group-btn {
+      & + .form-control {
+         @include border-top-left-radius(0px !important);
+         @include border-bottom-left-radius(0px !important);
+      }
+   }
+   & .form-control {
+      overflow: hidden;
+      position: relative;
+      @include border-top-left-radius(4px !important);
+      @include border-bottom-left-radius(4px !important);
+      & + .input-group-addon {
+         left:auto;
+         right:0
+      }
+   }
+   & > .form-control {
+      padding-right: 45px;
+   }
+   &.input-group-lg {
+      & .input-group-addon {
+         line-height: 57px;
+      }
+      & input.form-control {
+         height:55px;
+      }
+      & .input-group-btn {
+         & button.btn {
+            height:55px;
+         }
+      }
+   }
+   &.input-group-sm {
+      & .input-group-addon {
+         line-height: 37px;
+      }
+      & input.form-control {
+         height:35px;
+         font-size : 13px;
+      }
+      & .input-group-btn {
+         & button.btn {
+            height:35px;
+         }
+      }
+   }
+}
+
+input.form-control, select.form-control {
+   padding: 0 18px;
+   height: 45px;
+}
+
+select[multiple], select[size]{
+   height:auto !important;
+}
+
+.form-control {
+   @include box-shadow(0 0 0 0 white);
+   border-color : #eeeeee;
+   @include border-radius(4px);
+   &:focus {
+      border-color : $theme-color;
+      @include box-shadow(0 0 0 0 white);
+   }
+}
+
+form {
+   & .help-block {
+      color : $grey + 20;
+      margin-top: 10px
+   }
+   & label {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-bottom: 5px;
+   }
+}
+
+input[type=checkbox], input[type=radio] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   appearance: none;
+}
+
+.radio {
+   margin-bottom: 20px;
+   & input[type=radio] {
+      &:checked + .radio-text:before {
+         border-color: $theme-color;
+      }
+      &:disabled + .radio-text:before, &:disabled + .radio-text {
+         border-color: $grey + 50;
+         cursor: not-allowed;
+         color : $grey + 30;
+      }
+   }
+   & label {
+      padding: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      & .radio-text:before {
+         content : '';
+         display: inline-block;
+         width: 18px;
+         height: 18px;
+         margin-top: 4px;
+         margin-right: 5px;
+         vertical-align: top;
+         border:6px solid $grey + 30;
+         margin-right: 10px;
+         @include border-radius(100px)
+      }
+   }
+}
+
+.checkbox {
+   & input[type=checkbox] {
+      &:checked + .checkbox-text:before {
+         background: $theme-color;
+      }
+      &:checked + .checkbox-text:after {
+         left:20px;
+      }
+      &:disabled + .checkbox-text {
+         color : $grey + 30;
+      }
+      &:disabled + .checkbox-text:before {
+         background: #cccccc + 25;
+      }
+      &:disabled + .checkbox-text, &:disabled {
+         cursor: not-allowed;
+      }
+   }
+   & label {
+      position: relative;
+      padding: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      & .checkbox-text:before {
+         content : '';
+         display: inline-block;
+         width:40px;
+         height:15px;
+         margin-top: 5px;
+         margin-right: 5px;
+         vertical-align: top;
+         background: #cccccc;
+         margin-right: 10px;
+         @include border-radius(100px)
+      }
+      & .checkbox-text:after {
+         content: '';
+         display: inline-block;
+         position: absolute;
+         top: 2.4px;
+         left: 0;
+         width: 20px;
+         height: 20px;
+         background: #ffffff;
+         @include box-shadow(0px 1px 10px -4px black);
+         @include border-radius(50%)
+      }
+   }
+}

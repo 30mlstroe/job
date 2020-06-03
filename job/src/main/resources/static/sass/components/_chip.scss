@@ -1,0 +1,25 @@
+/* Chip */
+
+@charset "UTF-8";
+
+ul.chip {
+   padding: 0;
+   & li {
+      margin-right: 3px;
+      margin-bottom: 7px;
+      list-style-type: none;
+      display: inline-block;
+      height:25px;
+      font-size: 14px;
+      line-height: 25px;
+      background: $grey + 70;
+      padding: 0 15px;
+      @include border-radius(100px);
+      & .icon {
+         font-size : 18px;
+         margin-left: 10px;
+         cursor: pointer;
+         vertical-align: bottom;
+      }
+   }
+}

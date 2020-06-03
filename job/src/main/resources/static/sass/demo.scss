@@ -1,0 +1,30 @@
+/* demo.scss */
+
+@charset "UTF-8";
+
+ul.demo-colors {
+   & li {
+      padding: 10px 0;
+      text-align: center;
+      background: red;
+   }
+}
+
+.icon-list {
+   margin-bottom: 50px;
+   text-align: center;
+   & > div {
+      color : #888888;
+      padding: 10px 0;
+      height: 100px;
+      @include transition(all .2s);
+      & div[class^="md-"] {
+         font-size : 24px;
+         color : black
+      }
+      &:hover {
+         background: white;
+         @include box-shadow($shadow)
+      }
+   }
+}
